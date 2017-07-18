@@ -1,16 +1,13 @@
 package com.example.ranad_000.fitness_app;
 
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ranad_000.fitness_app.MainActivity;
-import com.example.ranad_000.fitness_app.R;
+import com.example.ranad_000.fitness_app.Activities.MainActivity;
 
 
 /**
