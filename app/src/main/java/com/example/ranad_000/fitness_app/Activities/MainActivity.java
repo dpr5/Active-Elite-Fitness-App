@@ -1,9 +1,15 @@
 package com.example.ranad_000.fitness_app.Activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ranad_000.fitness_app.R;
@@ -43,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
         TextView dateandtime = (TextView)findViewById(R.id.nutrition_text);
         String currentDateandTime = DateFormat.getDateTimeInstance().format(new Date());
 
+
+        ImageView workoutbtn = (ImageView) findViewById(R.id.imageve);
+
+        Bitmap workoutimage= BitmapFactory.decodeResource(getResources(),R.id.workoutButton);
+        RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), workoutimage);
+        roundedBitmapDrawable.setCircular(true);
+        workoutbtn.setImageDrawable(roundedBitmapDrawable);
 
     }
 

@@ -14,4 +14,14 @@
     <color name="logo_purple">#0007f6</color>
     <color name="logo_lightblue">#0098d8</color>
     <color name="white">#FFFFFF</color>
+
+
+    <!--
+    Leg workout Layout colors
+    -->
+
+    <color name="purplelight">#DFB1F4</color>
+    <color name="purplecenter">#8E5BA6</color>
+    <color name="purpledark">#2D0B3C</color>
+    <color name="purpledarker">#050007</color>
 </resources>

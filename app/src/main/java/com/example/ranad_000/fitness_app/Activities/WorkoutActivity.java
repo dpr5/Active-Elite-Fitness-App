@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 
 import com.example.ranad_000.fitness_app.R;
 import com.example.ranad_000.fitness_app.Adapters.WorkoutAdapter;
@@ -34,6 +35,8 @@ public class WorkoutActivity extends AppCompatActivity {
 
         adapter = new WorkoutAdapter();
         recyclerView.setAdapter(adapter);
+
+
     }
 
     @Override
