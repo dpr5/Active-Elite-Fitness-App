@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         String currentDateandTime = DateFormat.getDateTimeInstance().format(new Date());
 
 
-        ImageView workoutbtn = (ImageView) findViewById(R.id.imageve);
+        ImageView workoutbtn = (ImageView) findViewById(R.id.workoutButton);
 
         Bitmap workoutimage= BitmapFactory.decodeResource(getResources(),R.id.workoutButton);
         RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), workoutimage);

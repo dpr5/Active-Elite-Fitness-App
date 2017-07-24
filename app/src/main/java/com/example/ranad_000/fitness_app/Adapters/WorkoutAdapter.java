@@ -13,7 +13,7 @@ import com.example.ranad_000.fitness_app.R;
  * Created by ranad_000 on 7/12/2017.
  */
 
-public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> implements View.OnClickListener{
 
     private String[] titles = {"Chest Workout",
             "Arm Workout",
@@ -40,6 +40,11 @@ public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHol
             R.drawable.weighticon,
             };
 
+    @Override
+    public void onClick(View v) {
+
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         public int currentItem;
@@ -49,6 +54,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHol
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener((View.OnClickListener) this);
             itemImage = (ImageView) itemView.findViewById(R.id.item_image);
             itemTitle = (TextView) itemView.findViewById(R.id.item_title);
             itemDetail = (TextView) itemView.findViewById(R.id.item_detail);

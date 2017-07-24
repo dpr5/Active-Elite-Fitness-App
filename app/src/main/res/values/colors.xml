@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="blue1">#0011FF</color>
+
     <color name="grey">#9D9C9C</color>
 
     <color name="blueDark">#0069c0</color>
@@ -24,4 +24,11 @@
     <color name="purplecenter">#8E5BA6</color>
     <color name="purpledark">#2D0B3C</color>
     <color name="purpledarker">#050007</color>
+
+
+    <color name="blue0">#313232</color>
+    <color name="blue1">#0011FF</color>
+    <color name="blue2">#0F3F90</color>
+    <color name="blue3">#0143B2</color>
+    <color name="blue4">#384752</color>
 </resources>
