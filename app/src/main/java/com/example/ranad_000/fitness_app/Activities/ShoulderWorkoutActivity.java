@@ -24,45 +24,39 @@ public class ShoulderWorkoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoulder_workout);
 
-        String[] workouts = {"Shoulder Press", "Arnold Press" , "Lateral Raise", "Front Raise", "Upright Row", "Back Fly"};
-        ListAdapter chestworkouts = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, workouts);
+        String[] workouts = {"Shoulder Press", "Arnold Press" , "Lateral Raise", "Front Raise", "Upright Row", "Rear Deltoid Fly"};
+        ListAdapter shoulderworkouts = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, workouts);
         ListView mylist = (ListView) findViewById(R.id.my_list);
-        mylist.setAdapter(chestworkouts);
+        mylist.setAdapter(shoulderworkouts);
 
-        TextView dateandtime = (TextView) findViewById(R.id.date_and_time);
-        String currentDateandTime = DateFormat.getDateTimeInstance().format(new Date());
-
-        dateandtime.setText(currentDateandTime);
-
-        ImageView logo = (ImageView) findViewById(R.id.leg_image);
-        logo.setAlpha(0.4f);
 
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent bench = new Intent(view.getContext(), Bench_Workout_Activity.class);
+                    Intent bench = new Intent(view.getContext(), ShoulderPress_Workout_Activity.class);
                     startActivityForResult(bench, 0);
                 }
                 if (position == 1) {
-                    Intent incline = new Intent(view.getContext(), Incline_Bench_Activity.class);
+                    Intent incline = new Intent(view.getContext(), ArnoldPress_Workout_Activity.class);
                     startActivityForResult(incline, 0);
                 }
                 if (position == 2) {
-                    Intent decline = new Intent(view.getContext(), Decline_Workout_Activity.class);
+                    Intent decline = new Intent(view.getContext(), LateralRaise_Workout_Activity.class);
                     startActivityForResult(decline, 0);
                 }
                 if (position == 3) {
-                    Intent decline = new Intent(view.getContext(), CablePress_Workout_Activity.class);
+                    Intent decline = new Intent(view.getContext(), FrontRaise_Workout_Activity.class);
                     startActivityForResult(decline, 0);
                 }
                 if (position == 4) {
-                    Intent fly = new Intent(view.getContext(), ChestFly_Workout_Activity.class);
+                    Intent fly = new Intent(view.getContext(), UprightRow_Workout_Activity.class);
                     startActivityForResult(fly, 0);
                 }
-
-
+                if (position == 5) {
+                    Intent fly = new Intent(view.getContext(), Delt_Workout_Activity.class);
+                    startActivityForResult(fly, 0);
+                }
             }
         });
-
     }
 }

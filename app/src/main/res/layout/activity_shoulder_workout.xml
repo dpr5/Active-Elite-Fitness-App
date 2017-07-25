@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Shoulder Workout"
             android:background="@color/blue4"
+            android:textColor="@color/white"
             android:id="@+id/header_text"
             android:textSize="40sp"
             android:gravity="center_horizontal"

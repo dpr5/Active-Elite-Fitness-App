@@ -13,26 +13,26 @@
         <activity android:name=".Activities.SecondActivity" />
         <activity android:name=".Activities.nutritionActivity" />
         <activity android:name=".Activities.WorkoutActivity" />
-        <activity android:name=".chestWorkoutActivity">
-
+        <activity android:name=".chestWorkoutActivity" />
+        <activity android:name=".Activities.LegWorkoutActivity" />
+        <activity android:name=".Activities.ShoulderWorkoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-
-        <activity android:name=".Activities.LegWorkoutActivity" />
-        <activity android:name=".Activities.ShoulderWorkoutActivity">
-
         </activity>
         <activity android:name=".Activities.Incline_Bench_Activity" />
         <activity android:name=".Activities.Bench_Workout_Activity" />
         <activity android:name=".Activities.Decline_Workout_Activity" />
         <activity android:name=".Activities.ChestFly_Workout_Activity" />
-        <activity android:name=".Activities.CablePress_Workout_Activity"/>
+        <activity android:name=".Activities.CablePress_Workout_Activity" />
+        <activity android:name=".Activities.LateralRaise_Workout_Activity" />
+        <activity android:name=".Activities.ShoulderPress_Workout_Activity" />
+        <activity android:name=".Activities.ArnoldPress_Workout_Activity" />
+        <activity android:name=".Activities.FrontRaise_Workout_Activity" />
+        <activity android:name=".Activities.Delt_Workout_Activity" />
+        <activity android:name=".Activities.UprightRow_Workout_Activity"></activity>
     </application>
 
 </manifest>
