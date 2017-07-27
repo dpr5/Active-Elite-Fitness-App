@@ -27,7 +27,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHol
     private String[] details = {"Click for a chest workout guide",
             "Click for a arm workout guide", "Click for a leg workout guide",
             "Click for a shoulder workout guide", "Click for a core workout guide",
-            "Click for a body weight workout guide", "Click for a crossfit workout guide",
+            "Click for a back workout guide", "Click for a crossfit workout guide",
             "Comming Soon"};
 
     private int[] images = {R.drawable.chest_icon,

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void workoutActivity(View v){
-        Intent intent = new Intent(this,WorkoutActivity.class);
+        Intent intent = new Intent(this,BodyPartSelection.class);
         startActivity(intent);
     }
 

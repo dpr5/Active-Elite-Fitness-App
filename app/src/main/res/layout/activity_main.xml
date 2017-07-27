@@ -60,14 +60,15 @@
             android:src="@drawable/weighticon" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/shoulder_image"
             android:id="@+id/imageve"
+            android:clickable="true"
             android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/scaleButton4"
-            android:layout_alignEnd="@+id/scaleButton4"
-            android:layout_marginTop="29dp" />
+            android:layout_alignLeft="@+id/workoutButton"
+            android:layout_alignStart="@+id/workoutButton"
+            android:layout_marginTop="26dp" />
 
         <ImageButton
             android:id="@+id/scaleButton4"
