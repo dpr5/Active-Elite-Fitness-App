@@ -47,121 +47,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ImageView
-            android:id="@+id/workoutButton"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_above="@+id/nutritionButton"
-            android:layout_alignLeft="@+id/nutritionButton"
-            android:layout_alignStart="@+id/nutritionButton"
-            android:layout_marginBottom="20dp"
-            android:onClick="workoutActivity"
-            android:scaleType="fitXY"
-            android:src="@drawable/weighticon" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/shoulder_image"
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageve"
-            android:clickable="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/workoutButton"
-            android:layout_alignStart="@+id/workoutButton"
-            android:layout_marginTop="26dp" />
-
-        <ImageButton
-            android:id="@+id/scaleButton4"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:scaleType="fitXY"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/weightscale"
-            android:layout_alignTop="@+id/workoutButton"
-            android:layout_toRightOf="@+id/workoutButton"
-            android:layout_toEndOf="@+id/workoutButton" />
-
-        <ImageButton
-            android:id="@+id/nutritionButton"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:onClick="nutritionActivity"
-            android:src="@drawable/nutritionicon"
-            android:paddingBottom="0dp"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:paddingTop="0dp"
-            android:scaleType="fitXY"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="22dp"
-            android:layout_marginStart="22dp"
-            android:layout_marginBottom="21dp" />
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="44dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:onClick="workoutActivity"
+            android:src="@drawable/shoulder_image" />
 
-
-        <ImageButton
-            android:id="@+id/healthButton"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:onClick="myClick"
-            android:paddingBottom="0dp"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp"
-            android:paddingTop="0dp"
-            android:scaleType="fitXY"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/weightloseicon"
-            android:layout_alignBottom="@+id/nutritionButton"
-            android:layout_toRightOf="@+id/nutritionButton"
-            />
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:id="@+id/nutrition_text"
-            android:textSize="25dp"
-            android:layout_alignParentBottom="true"
-           />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Workouts"
-            android:id="@+id/workout_text"
-            android:textSize="25dp"
-            android:layout_above="@+id/nutritionButton"
-            android:layout_alignRight="@+id/nutrition_text"
-            android:layout_alignEnd="@+id/nutrition_text"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stats"
-            android:id="@+id/stats_text"
-            android:textSize="25dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_above="@+id/healthButton"
- />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Health"
-            android:id="@+id/health_text"
-            android:textSize="25dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/stats_text"
-            android:layout_alignStart="@+id/stats_text" />
 
     </RelativeLayout>
 

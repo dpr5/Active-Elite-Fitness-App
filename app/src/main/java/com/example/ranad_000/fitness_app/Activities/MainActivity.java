@@ -46,16 +46,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView dateandtime = (TextView)findViewById(R.id.nutrition_text);
-        String currentDateandTime = DateFormat.getDateTimeInstance().format(new Date());
 
 
-        ImageView workoutbtn = (ImageView) findViewById(R.id.workoutButton);
 
-        Bitmap workoutimage= BitmapFactory.decodeResource(getResources(),R.id.workoutButton);
-        RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), workoutimage);
-        roundedBitmapDrawable.setCircular(true);
-        workoutbtn.setImageDrawable(roundedBitmapDrawable);
+
 
     }
 

@@ -45,8 +45,7 @@
         <activity android:name=".Activities.BackFly_Workout_Activity" />
         <activity android:name=".Activities.TBarRow_Workout_Activity" />
         <activity android:name=".Activities.IsoRow_Workout_Activity" />
-        <activity android:name=".Activities.Arm_Workout_Activity"/>
-
+        <activity android:name=".Activities.Arm_Workout_Activity" />
         <activity android:name=".Activities.HammerCurl_Workout_Activity" />
         <activity android:name=".Activities.BarbellCurl_Workout_Activity" />
         <activity android:name=".Activities.TricepExt_Workout_Activity" />
@@ -54,7 +53,8 @@
         <activity android:name=".Activities.TricepExnt_Workout_Activity" />
         <activity android:name=".Activities.SkullCrusher_Workout_Activity" />
         <activity android:name=".Activities.TricepPushDown_Workout_Activity" />
-        <activity android:name=".Activities.BodyPartSelection"></activity>
+        <activity android:name=".Activities.BodyPartSelection" />
+        <activity android:name=".Activities.Keto_Diet"></activity>
     </application>
 
 </manifest>
