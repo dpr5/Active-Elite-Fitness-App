@@ -33,7 +33,43 @@
 
     <string name="keto_Description">A keto diet is a diet where you take in low to no carbohydrates, high fats, and moderately high protein.
         This causes the body to burn fat for energy instead of carbohydates.  It is a faster way to burn fat.
-
-
     </string>
+
+    <string name="keto_diet"></string>
+
+
+    <string name="Intermittent_Fasting">Intermittent fasting is an eating pattern that cycles between periods of fasting and eating.
+
+Rather than restricting the foods you eat, it states when you should eat them.
+
+Therefore, it can be seen as more of an eating pattern than a diet.
+
+The most popular ways to do intermittent fasting are:
+
+The 16/8 method: Involves skipping breakfast and restricting your daily eating period to 8 hours, subsequently fasting for the remaining 16 hours of the day.
+The eat-stop-eat method: Involves 24-hour fasts once or twice per week on non-consecutive days.
+The 5:2 diet: On two non-consecutive days of the week, you restrict your intake to 500–600 calories. On the five remaining days, you eat like normal.
+The warrior diet: Eat small amounts of raw fruits and vegetables during the day and one huge meal at night, basically fasting during the day and feasting at night within a 4-hour window.
+How it works: Intermittent fasting is commonly used for weight loss because it leads to relatively easy calorie restriction.
+
+It can make you eat fewer calories overall, as long as you don’t overcompensate by eating much more during the eating periods.
+
+Weight loss: Intermittent fasting is generally very successful for weight loss. It has been shown to cause weight loss of 3–8% over a period of 3–24 weeks, which is a lot compared to most weight loss studies (99, 100).
+
+In addition to causing less muscle loss than standard calorie restriction, it may increase your metabolic rate by 3.6–14% in the short-term (99, 101, 102, 103).
+
+Other benefits: Intermittent fasting may reduce markers of inflammation, cholesterol levels, blood triglycerides and blood sugar levels (104, 105, 106, 107).
+
+Furthermore, intermittent fasting has been linked to increased levels of human growth hormone, improved insulin sensitivity, improved cellular repair and altered gene expressions (108, 109, 110, 111, 112).
+
+Animal studies also suggest that it may help new brain cells grow, lengthen lifespan and protect against Alzheimer’s disease and cancer (113, 114, 115, 116).
+
+The downside: Although intermittent fasting is safe for well-nourished and healthy people, it does not suit everyone.
+
+Some studies have shown it’s not as beneficial for women as it is for men (117, 118).
+
+In addition, some people should avoid fasting. This includes those sensitive to drops in blood sugar levels, pregnant women, breastfeeding moms, teenagers, children and people who are malnourished, underweight or nutrient deficient.
+
+Bottom Line: Intermittent fasting cycles between fasting and eating in various patterns. It is very effective for weight loss and has been linked to numerous health benefits.</string>
+
 </resources>
