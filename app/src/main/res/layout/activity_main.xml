@@ -59,21 +59,21 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="24dp"
             android:clickable="true"
-            android:onClick="nutritionActivity"
+            android:onClick="workoutActivity"
             android:src="@drawable/shoulder_image" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/nutrition_button"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:clickable="true"
-            android:onClick="workoutActivity"
-            android:src="@drawable/keto_diet_image"
             android:layout_alignTop="@+id/workout_button"
-            android:layout_toRightOf="@+id/workout_button"
-            android:layout_toEndOf="@+id/workout_button"
             android:layout_marginLeft="19dp"
-            android:layout_marginStart="19dp" />
+            android:layout_marginStart="19dp"
+            android:layout_toEndOf="@+id/workout_button"
+            android:layout_toRightOf="@+id/workout_button"
+            android:clickable="true"
+            android:onClick="nutritionActivity"
+            android:src="@drawable/keto_diet_image" />
 
 
     </RelativeLayout>

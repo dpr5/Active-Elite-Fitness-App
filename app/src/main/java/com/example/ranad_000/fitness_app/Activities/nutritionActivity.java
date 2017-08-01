@@ -1,14 +1,21 @@
 package com.example.ranad_000.fitness_app.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import com.example.ranad_000.fitness_app.Adapters.NutritionAdapter;
 import com.example.ranad_000.fitness_app.R;
+import com.example.ranad_000.fitness_app.Vegan_Diet;
 
 import static com.example.ranad_000.fitness_app.R.menu.menu_card_workouts_list;
 
@@ -23,39 +30,35 @@ public class nutritionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition_actitity);
-        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
 
-        recyclerView =
-                (RecyclerView) findViewById(R.id.recycler_view);
 
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        String[] workouts = {"Keto Diet", "Intermittent Fasting", "Vegan Diet", "coming soon..."};
+        ListAdapter shoulderworkouts = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, workouts);
+        ListView mylist = (ListView) findViewById(R.id.my_list);
+        mylist.setAdapter(shoulderworkouts);
 
-        adapter = new NutritionAdapter();
-        recyclerView.setAdapter(adapter);
-    }
+        mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent bench = new Intent(view.getContext(), Keto_Diet.class);
+                    startActivityForResult(bench, 0);
+                }
+                if (position == 1) {
+                    Intent incline = new Intent(view.getContext(), Intermittent_Fasting.class);
+                    startActivityForResult(incline, 0);
+                }
+                if (position == 2) {
+                    Intent decline = new Intent(view.getContext(), Vegan_Diet.class);
+                    startActivityForResult(decline, 0);
+                }
+                if (position == 3) {
+                    Intent decline = new Intent(view.getContext(), LegWorkoutActivity.class);
+                    startActivityForResult(decline, 0);
+                }
+            }
+        });
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(menu_card_workouts_list, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 }
