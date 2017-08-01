@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ranad_000.fitness_app.Activities.Workout_Plans">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a Workout Plan"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cardio_plan"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/chest_plan"
+        android:layout_toStartOf="@+id/chest_plan"
+        android:clickable="true"
+        android:onClick="workoutPlans"
+        android:src="@drawable/runner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click for cardio plan"
+        android:textSize="15dp"
+        android:id="@+id/textView3"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/cardio_plan"
+        android:layout_alignRight="@+id/cardio_plan"
+        android:layout_alignEnd="@+id/cardio_plan"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chest_plan"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/cardio_plan"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:clickable="true"
+        android:onClick="chestPlans"
+        android:src="@drawable/chest_image" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignEnd="@+id/chest_plan"
+        android:layout_alignRight="@+id/chest_plan"
+        android:layout_toEndOf="@+id/cardio_plan"
+        android:layout_toRightOf="@+id/cardio_plan"
+        android:text="Click for chest plan"
+        android:textAlignment="center"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardio_plan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="More workout plans coming soon..."
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>

@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:src="@drawable/paleo_thumbnail"
+        android:src="@drawable/keto_diet_image"
         android:scaleType="fitXY"
         android:id="@+id/imageView4" />
 

@@ -21,8 +21,8 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
 
-    public void myClick(View v){
-        Intent intent = new Intent(this,SecondActivity.class);
+    public void workoutPlans(View v){
+        Intent intent = new Intent(this,Workout_Plans.class);
         startActivity(intent);
     }
 
