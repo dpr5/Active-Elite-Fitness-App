@@ -55,7 +55,7 @@
         <activity android:name=".Activities.TricepPushDown_Workout_Activity" />
         <activity android:name=".Activities.BodyPartSelection" />
         <activity android:name=".Activities.Keto_Diet" />
-        <activity android:name=".Vegan_Diet"></activity>
+        <activity android:name=".Activities.Vegan_Diet"></activity>
     </application>
 
 </manifest>

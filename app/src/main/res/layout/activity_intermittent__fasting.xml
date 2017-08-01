@@ -6,42 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.example.ranad_000.fitness_app.Activities.Intermittent_Fasting">
 
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:src="@drawable/intermittent_fasting"
         android:scaleType="fitXY"
-        android:src="@drawable/paleo_thumbnail" />
+        android:id="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Intermittent Fasting"
-        android:textSize="40sp"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true" />
+        android:text="Intermittet Fasting"
+        android:textSize="40dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="84dp">
+        android:layout_alignParentStart="true">
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Intermittent_Fasting"
+            android:padding="10dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp" />
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:paddingTop="20dp"
-        android:text="@string/Intermittent_Fasting"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

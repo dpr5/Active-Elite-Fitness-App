@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.ranad_000.fitness_app.Activities.MainActivity;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override

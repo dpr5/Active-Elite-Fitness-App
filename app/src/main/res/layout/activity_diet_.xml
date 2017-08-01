@@ -6,28 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.example.ranad_000.fitness_app.Activities.Diet_Activity">
 
+
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/paleo_thumbnail"
-        android:id="@+id/imageView2" />
-
-
-    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="200dp"
+        android:src="@drawable/paleo_thumbnail"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Paleo Diet"
+        android:textSize="40dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
 
-        android:paddingTop="20dp"
-        android:padding="15dp"
-        android:layout_below="@+id/textView" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paleo_diet"
+            android:padding="10dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp" />
 
     </ScrollView>
+
+
+
 </RelativeLayout>
