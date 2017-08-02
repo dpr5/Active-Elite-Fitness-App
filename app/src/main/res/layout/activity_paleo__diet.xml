@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ranad_000.fitness_app.Activities.Intermittent_Fasting">
+    tools:context="com.example.ranad_000.fitness_app.Activities.Paleo_Diet">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:src="@drawable/intermittent_fasting"
+        android:src="@drawable/paleo_thumbnail"
         android:scaleType="fitXY"
         android:id="@+id/imageView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Intermittent Fasting"
+        android:text="Paleo Diet"
         android:textSize="40dp"
         android:layout_below="@+id/imageView4"
         android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Intermittent_Fasting"
+            android:text="@string/paleo_diet"
             android:padding="10dp"
             android:layout_below="@+id/textView3"
             android:layout_centerHorizontal="true"

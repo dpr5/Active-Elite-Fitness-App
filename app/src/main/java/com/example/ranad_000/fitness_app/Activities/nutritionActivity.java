@@ -36,7 +36,7 @@ public class nutritionActivity extends AppCompatActivity {
                     startActivityForResult(incline, 0);
                 }
                 if (position == 2) {
-                    Intent decline = new Intent(view.getContext(), Diet_Activity.class);
+                    Intent decline = new Intent(view.getContext(), Paleo_Diet.class);
                     startActivityForResult(decline, 0);
                 }
                 if (position == 3) {
