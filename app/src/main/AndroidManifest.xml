@@ -57,7 +57,8 @@
         <activity android:name=".Activities.Keto_Diet" />
         <activity android:name=".Activities.Vegan_Diet" />
         <activity android:name=".Activities.Workout_Plans" />
-        <activity android:name=".Activities.Chest_Plan"></activity>
+        <activity android:name=".Activities.Chest_Plan" />
+        <activity android:name=".Activities.Cardio_Plan"></activity>
     </application>
 
 </manifest>

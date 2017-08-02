@@ -16,7 +16,7 @@ public class Workout_Plans extends AppCompatActivity {
     }
 
     public void workoutPlans(View v) {
-        Intent intent = new Intent(this, Workout_Plans.class);
+        Intent intent = new Intent(this, Cardio_Plan.class);
         startActivity(intent);
     }
 
