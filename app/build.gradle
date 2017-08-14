@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.example.ranad_000.Fitness_App"
+        applicationId "com.myFitness.ranad_000.Fitness_App"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1

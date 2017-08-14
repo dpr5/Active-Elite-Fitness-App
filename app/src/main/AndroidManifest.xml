@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ranad_000.fitness_app">
+    package="com.myFitness.ranad_000.fitness_app">
 
     <application
         android:allowBackup="true"

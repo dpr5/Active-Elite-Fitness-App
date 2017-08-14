@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_blue_background"
-    tools:context="com.example.ranad_000.fitness_app.Activities.LegPress_Workout_Activity">
+    tools:context="com.myFitness.ranad_000.fitness_app.Activities.LegPress_Workout_Activity">
 
 
     <ScrollView

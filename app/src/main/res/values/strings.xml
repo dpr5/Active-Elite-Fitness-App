@@ -32,7 +32,19 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="keto_diet" formatted="false"></string>
+    <string name="keto_diet" formatted="false">"A keto diet is well known for being a low carb diet, where the body produces ketones in the liver to be used as energy. It’s referred to as many different names – ketogenic diet, low carb diet, low carb high fat (LCHF), etc.
+
+When you eat something high in carbs, your body will produce glucose and insulin.
+
+Glucose is the easiest molecule for your body to convert and use as energy so that it will be chosen over any other energy source.
+Insulin is produced to process the glucose in your bloodstream by taking it around the body.
+Since the glucose is being used as a primary energy, your fats are not needed and are therefore stored. Typically on a normal, higher carbohydrate diet, the body will use glucose as the main form of energy. By lowering the intake of carbs, the body is induced into a state known as ketosis.
+
+Ketosis is a natural process the body initiates to help us survive when food intake is low. During this state, we produce ketones, which are produced from the breakdown of fats in the liver.
+
+The end goal of a properly maintained keto diet is to force your body into this metabolic state. We don’t do this through starvation of calories but starvation of carbohydrates.
+
+        Our bodies are incredibly adaptive to what you put into it – when you overload it with fats and take away carbohydrates, it will begin to burn ketones as the primary energy source. Optimal ketone levels offer many health, weight loss, physical and mental performance benefits."</string>
 
 
     <string name="paleo_diet" formatted="false">"The paleo diet claims that modern humans should eat the same foods that their hunter-gatherer ancestors ate — the way humans were genetically designed to eat before agriculture developed.

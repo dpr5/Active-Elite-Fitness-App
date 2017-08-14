@@ -1,4 +1,4 @@
-package com.example.ranad_000.fitness_app;
+package com.myFitness.ranad_000.fitness_app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -15,12 +15,12 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+public class myFitnessInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ranad_000.fitness_app", appContext.getPackageName());
+        assertEquals("com.myFitness.ranad_000.fitness_app", appContext.getPackageName());
     }
 }
