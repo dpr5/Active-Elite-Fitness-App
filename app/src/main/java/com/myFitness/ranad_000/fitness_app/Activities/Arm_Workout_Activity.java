@@ -67,7 +67,7 @@ public class Arm_Workout_Activity extends AppCompatActivity {
                     Intent fly = new Intent(view.getContext(), TricepPushDown_Workout_Activity.class);
                     startActivityForResult(fly, 0);
                 }
-                if (position == 4) {
+                if (position == 5) {
                     Intent fly = new Intent(view.getContext(), SkullCrusher_Workout_Activity.class);
                     startActivityForResult(fly, 0);
                 }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Cardio Workout"
+        android:textSize="30dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="28dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="800dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Burpees: Do as many as you can in 5 minutes"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:id="@+id/burpeetr"
+                android:layout_below="@+id/burpee1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/burpee2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/burpee2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_alignTop="@+id/burpee1"
+                android:layout_toRightOf="@+id/burpee1"
+                android:layout_toEndOf="@+id/burpee1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/burpee1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:src="@drawable/burpee1"
+                android:layout_marginLeft="39dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="88dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="191dp"
+                android:padding="5dp"
+                android:text="Jumping Jacks: Do as many as you can in 5 minutes"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:id="@+id/jumpingJacktr"
+                android:layout_below="@+id/burpeetr"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/jumpingJacktr1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:src="@drawable/jumping_jack1"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/burpee1"
+                android:layout_alignStart="@+id/burpee1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/jumpingJacktr2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:src="@drawable/jumping_jack2"
+                android:layout_alignTop="@+id/jumpingJacktr1"
+                android:layout_alignLeft="@+id/burpee2"
+                android:layout_alignStart="@+id/burpee2"
+                android:layout_marginTop="322dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Lateral Speed Step: Do as many as you can in 5 minutes"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:id="@+id/latspeedtr"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/latspeed1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:src="@drawable/lat_speed_set1"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/jumpingJacktr"
+                android:layout_alignLeft="@+id/jumpingJacktr1"
+                android:layout_alignStart="@+id/jumpingJacktr1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/latspeed2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clickable="true"
+                android:src="@drawable/lat_speed_set2"
+                android:layout_alignTop="@+id/latspeed1"
+                android:layout_alignLeft="@+id/jumpingJacktr2"
+                android:layout_alignStart="@+id/jumpingJacktr2" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -33,12 +33,6 @@ public class BodyPartSelection extends AppCompatActivity {
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    //first_image.setImageResource(R.drawable.arnold_press1);
-                    //second_image.setImageResource(R.drawable.arnold_press2);
-                    //workout_title.setText("Arnold Press");
-                    //first_image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.arnold_press1,null));
-
-                    //first_image.setImageResource(R.drawable.arnold_press1);
                     Intent bench = new Intent(view.getContext(), chestWorkoutActivity.class);
                     startActivityForResult(bench, 0);
                 }
@@ -58,10 +52,7 @@ public class BodyPartSelection extends AppCompatActivity {
                     Intent fly = new Intent(view.getContext(), ShoulderWorkoutActivity.class);
                     startActivityForResult(fly, 0);
                 }
-                if (position == 4) {
-                    Intent fly = new Intent(view.getContext(), SkullCrusher_Workout_Activity.class);
-                    startActivityForResult(fly, 0);
-                }
+
             }
         });
 

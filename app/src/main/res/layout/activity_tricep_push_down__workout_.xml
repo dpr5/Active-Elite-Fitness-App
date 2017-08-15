@@ -8,5 +8,5 @@
     tools:context="com.myFitness.ranad_000.fitness_app.Activities.TricepPushDown_Workout_Activity">
 
 
-    <include layout="@layout/workout_layout"/>
+    <include layout="@layout/workout_layout" />
 </RelativeLayout>
