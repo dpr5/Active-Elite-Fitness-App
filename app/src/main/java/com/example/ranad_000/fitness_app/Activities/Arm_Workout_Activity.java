@@ -20,7 +20,8 @@ import com.example.ranad_000.fitness_app.Activities.IsoRow_Workout_Activity;
 import com.example.ranad_000.fitness_app.Activities.LatPulldown_Workout_Activity;
 import com.example.ranad_000.fitness_app.Activities.LowRow_Workout_Activity;
 import com.example.ranad_000.fitness_app.Activities.TBarRow_Workout_Activity;
-import com.example.ranad_000.fitness_app.R;
+import com.example.ranad_000.fitness_app.Activities.*;
+import com.myFitness.ranad_000.fitness_app.R;
 
 public class Arm_Workout_Activity extends AppCompatActivity {
 

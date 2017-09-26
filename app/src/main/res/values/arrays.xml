@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="nutrition_images">
+        <item>@drawable/bench_wide1</item>
+        <item>@drawable/leg_image</item>
+        <item>@drawable/burpee1</item>
+        <item>@drawable/arnold_press2</item>
+    </array>
+
+
+
+</resources>
