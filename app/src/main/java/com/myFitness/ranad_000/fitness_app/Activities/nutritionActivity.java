@@ -1,52 +1,55 @@
 package com.myFitness.ranad_000.fitness_app.Activities;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
+import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
+import com.myFitness.ranad_000.fitness_app.Adapters.Card_for_nutrition;
 import com.myFitness.ranad_000.fitness_app.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class nutritionActivity extends AppCompatActivity {
+
+    private CardAdapter adapter;
+    private RecyclerView recView;
+
+    private List<Card_for_nutrition> nutritionCard = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition_actitity);
 
+        recView = (RecyclerView) findViewById(R.id.recView);
+        adapter = new CardAdapter(nutritionCard);
 
-        String[] Diets_list = {"Keto Diet", "Intermittent Fasting", "Paleo Diet", "more diets coming soon..."};
-        ListAdapter diets = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, Diets_list);
-        ListView mylist = (ListView) findViewById(R.id.my_list);
-        mylist.setAdapter(diets);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recView.setLayoutManager(layoutManager);
+        recView.setHasFixedSize(true);
+        recView.setAdapter(adapter);
 
-        mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    Intent bench = new Intent(view.getContext(), Keto_Diet.class);
-                    startActivityForResult(bench, 0);
-                }
-                if (position == 1) {
-                    Intent incline = new Intent(view.getContext(), Intermittent_Fasting.class);
-                    startActivityForResult(incline, 0);
-                }
-                if (position == 2) {
-                    Intent decline = new Intent(view.getContext(), Paleo_Diet.class);
-                    startActivityForResult(decline, 0);
-                }
-                if (position == 3) {
-                    Intent decline = new Intent(view.getContext(), LegWorkoutActivity.class);
-                    startActivityForResult(decline, 0);
-                }
-            }
-        });
-
+        initData();
 
     }
+
+    private void initData(){
+        Card_for_nutrition card = new Card_for_nutrition("Keto", R.drawable.keto_diet_image);
+        nutritionCard.add(card);
+
+        card = new Card_for_nutrition("Fasting", R.drawable.intermittent_fasting);
+        nutritionCard.add(card);
+
+        card = new Card_for_nutrition("KCalorieeto", R.drawable.calf_raise1);
+        nutritionCard.add(card);
+
+        card = new Card_for_nutrition("Keto", R.drawable.keto_diet_image);
+        nutritionCard.add(card);
+
+    }
+
 
 }

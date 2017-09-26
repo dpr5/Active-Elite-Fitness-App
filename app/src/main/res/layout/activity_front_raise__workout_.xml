@@ -8,5 +8,7 @@
     tools:context="com.myFitness.ranad_000.fitness_app.Activities.FrontRaise_Workout_Activity">
 
 
+    <include layout="@layout/activity_toolbar__top"/>
     <include layout="@layout/workout_layout"/>
+
 </RelativeLayout>

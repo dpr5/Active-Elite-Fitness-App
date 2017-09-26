@@ -51,9 +51,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         public ViewHolder(View itemView) {
             super(itemView);
-            itemImage = (ImageView) itemView.findViewById(R.id.item_image);
-            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
-            itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
+            //itemImage = (ImageView) itemView.findViewById(R.id.item_image);
+            //itemTitle = (TextView) itemView.findViewById(R.id.item_title);
+            //itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

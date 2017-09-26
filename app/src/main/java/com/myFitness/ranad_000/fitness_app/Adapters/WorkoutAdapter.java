@@ -55,9 +55,9 @@ public class WorkoutAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHol
         public ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener((View.OnClickListener) this);
-            itemImage = (ImageView) itemView.findViewById(R.id.item_image);
-            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
-            itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
+           // itemImage = (ImageView) itemView.findViewById(R.id.item_image);
+            //itemTitle = (TextView) itemView.findViewById(R.id.item_title);
+            //itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

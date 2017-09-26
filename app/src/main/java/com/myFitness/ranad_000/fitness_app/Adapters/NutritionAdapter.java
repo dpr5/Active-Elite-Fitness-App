@@ -13,7 +13,7 @@ import com.myFitness.ranad_000.fitness_app.R;
  * Created by ranad_000 on 7/14/2017.
  */
 
-public class NutritionAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder>{
+public class NutritionAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private String[] titles = {"Keto Diet",
             "Nutrition Plans",
@@ -44,9 +44,9 @@ public class NutritionAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewH
 
         public ViewHolder(View itemView) {
             super(itemView);
-            itemImage = (ImageView) itemView.findViewById(R.id.item_image);
-            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
-            itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
+            //itemImage = (ImageView) itemView.findViewById(R.id.item_image);
+            //itemTitle = (TextView) itemView.findViewById(R.id.item_title);
+            //itemDetail = (TextView) itemView.findViewById(R.id.item_detail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
