@@ -7,50 +7,11 @@
     tools:context="com.myFitness.ranad_000.fitness_app.Activities.BodyPartSelection">
 
 
-    <include layout="@layout/activity_toolbar__top"/>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:background="@color/blueLight"
-        android:layout_above="@+id/my_list"
-        android:layout_alignParentTop="true">
-
-
-
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:layout_centerVertical="true"
-            android:src="@drawable/chest_image"
-            android:alpha="0.4"
-            />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Select a workout"
-            android:textColor="@color/white"
-            android:background="@color/blue4"
-            android:id="@+id/header_text"
-            android:textSize="40sp"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="220dp"/>
-
-    </RelativeLayout>
-
-
-    <ListView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/my_list"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        />
+        android:layout_height="match_parent">
 
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

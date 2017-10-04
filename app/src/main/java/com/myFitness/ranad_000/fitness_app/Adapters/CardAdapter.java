@@ -2,15 +2,21 @@ package com.myFitness.ranad_000.fitness_app.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.myFitness.ranad_000.fitness_app.Activities.RecyclerViewClickListener;
 import com.myFitness.ranad_000.fitness_app.R;
 
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
+
+//import com.myFitness.ranad_000.fitness_app.Activities.RecyclerViewClickListener;
 
 /**
  * Created by ranad_000 on 9/20/2017.
@@ -18,10 +24,23 @@ import java.util.List;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.NumberViewHolder> {
 
-    private List<Card_for_nutrition> nutritionCard;
+    private List<Data_for_Cards> data;
+    final private RecyclerViewClickListener mOnClickListener;
+    private static int viewHolderCount;
 
 
-    public class NumberViewHolder extends RecyclerView.ViewHolder {
+    //****+++++++++++++++++++++++++++++constructor+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    public CardAdapter(List<Data_for_Cards> data, RecyclerViewClickListener listener) {
+        this.data = data;
+        mOnClickListener = listener;
+        viewHolderCount = 0;
+    }
+
+
+    //===============================================================================================================
+
+
+    class NumberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView text;
         public ImageView image;
@@ -31,34 +50,42 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.NumberViewHold
 
             text = (TextView) itemView.findViewById(R.id.card_title);
             image = (ImageView) itemView.findViewById(R.id.card_image);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int clickedPosition = getAdapterPosition();
+            mOnClickListener.onListItemClick(clickedPosition);
         }
     }
 
-    public CardAdapter(List<Card_for_nutrition> nutritionCard) {
-        this.nutritionCard = nutritionCard;
-    }
 
     @Override
-    public CardAdapter.NumberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NumberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardlayout, parent, false);
-//        Context context = parent.getContext();
-//        int layoutForListItem = R.layout.cardlayout;
-//        LayoutInflater inflater = LayoutInflater.from(context);
-//        boolean shouldAtachToParentImmediately = false;
-//        View view = inflater.inflate(layoutForListItem, parent, shouldAtachToParentImmediately);
-//        NumberViewHolder viewHolder = new NumberViewHolder(view);
-        //return viewHolder;
-        return new CardAdapter.NumberViewHolder(itemView);
+        Context context = parent.getContext();
+        int layoutIdForListItem = R.layout.cardlayout;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        boolean shouldAttachToParentImmediately = false;
+
+        View view = inflater.inflate(layoutIdForListItem, parent, shouldAttachToParentImmediately);
+        NumberViewHolder viewHolder = new NumberViewHolder(view);
+
+        //View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardlayout, parent, false);
+        return new CardAdapter.NumberViewHolder(view);
+
     }
-
 
 
     @Override
     public void onBindViewHolder(CardAdapter.NumberViewHolder holder, int position) {
-        Card_for_nutrition card_for_nutrition = nutritionCard.get(position);
+        Data_for_Cards card_for_nutrition = data.get(position);
         holder.text.setText(card_for_nutrition.getTitle());
         holder.image.setImageResource(card_for_nutrition.getImageID());
+
+        Log.d(TAG, "#" + position);
+
     }
 
     @Override
@@ -66,9 +93,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.NumberViewHold
         super.onAttachedToRecyclerView(recyclerView);
     }
 
+
     @Override
     public int getItemCount() {
-        return nutritionCard.size();
+        return data.size();
     }
 
 }

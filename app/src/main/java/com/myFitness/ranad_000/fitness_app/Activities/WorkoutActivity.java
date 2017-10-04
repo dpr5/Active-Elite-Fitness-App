@@ -4,28 +4,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
-import com.myFitness.ranad_000.fitness_app.Adapters.WorkoutAdapter;
+import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
 import com.myFitness.ranad_000.fitness_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.myFitness.ranad_000.fitness_app.R.menu.menu_card_workouts_list;
-
 public class WorkoutActivity extends AppCompatActivity {
 
 
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter adapter;
+    private CardAdapter adapter;
+    private RecyclerView recView;
 
-    private CardAdapter cardAdapter;
-
-
+    private List<Data_for_Cards> nutritionCard = new ArrayList<>();
 
 
     @Override
@@ -33,38 +26,30 @@ public class WorkoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
 
-        recyclerView =
-                (RecyclerView) findViewById(R.id.recycler_view);
+        recView = (RecyclerView) findViewById(R.id.recView);
+        //adapter = new CardAdapter(nutritionCard);
 
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recView.setLayoutManager(layoutManager);
+        recView.setHasFixedSize(true);
+        recView.setAdapter(adapter);
 
-
-        recyclerView.setAdapter(cardAdapter);
-
+        initData();
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(menu_card_workouts_list, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
+    private void initData() {
+        Data_for_Cards card = new Data_for_Cards("Keto", R.drawable.keto_diet_image);
+        nutritionCard.add(card);
 
+        card = new Data_for_Cards("Fasting", R.drawable.intermittent_fasting);
+        nutritionCard.add(card);
+
+        card = new Data_for_Cards("KCalorieeto", R.drawable.calf_raise1);
+        nutritionCard.add(card);
+
+        card = new Data_for_Cards("Keto", R.drawable.keto_diet_image);
+        nutritionCard.add(card);
+
+    }
 }

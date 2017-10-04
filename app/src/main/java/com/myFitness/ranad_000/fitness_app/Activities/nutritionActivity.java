@@ -1,23 +1,25 @@
 package com.myFitness.ranad_000.fitness_app.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
-import com.myFitness.ranad_000.fitness_app.Adapters.Card_for_nutrition;
+import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
 import com.myFitness.ranad_000.fitness_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class nutritionActivity extends AppCompatActivity {
+public class nutritionActivity extends AppCompatActivity implements RecyclerViewClickListener {
 
     private CardAdapter adapter;
     private RecyclerView recView;
 
-    private List<Card_for_nutrition> nutritionCard = new ArrayList<>();
+    private List<Data_for_Cards> nutritionCard = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,8 @@ public class nutritionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nutrition_actitity);
 
         recView = (RecyclerView) findViewById(R.id.recView);
-        adapter = new CardAdapter(nutritionCard);
+
+        adapter = new CardAdapter(nutritionCard, this);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recView.setLayoutManager(layoutManager);
@@ -36,20 +39,44 @@ public class nutritionActivity extends AppCompatActivity {
 
     }
 
-    private void initData(){
-        Card_for_nutrition card = new Card_for_nutrition("Keto", R.drawable.keto_diet_image);
+    private void initData() {
+        Data_for_Cards card = new Data_for_Cards("Keto", R.drawable.keto_diet_image);
         nutritionCard.add(card);
 
-        card = new Card_for_nutrition("Fasting", R.drawable.intermittent_fasting);
+        card = new Data_for_Cards("Fasting", R.drawable.intermittent_fasting);
         nutritionCard.add(card);
 
-        card = new Card_for_nutrition("KCalorieeto", R.drawable.calf_raise1);
+        card = new Data_for_Cards("KCalorieeto", R.drawable.calf_raise1);
         nutritionCard.add(card);
 
-        card = new Card_for_nutrition("Keto", R.drawable.keto_diet_image);
+        card = new Data_for_Cards("Keto", R.drawable.keto_diet_image);
         nutritionCard.add(card);
 
     }
 
-
+    @Override
+    public void onListItemClick(int clickedItemIndex) {
+        switch (clickedItemIndex) {
+            case 0:
+                Intent chest = new Intent(nutritionActivity.this, Chest_Plan.class);
+                startActivity(chest);
+                break;
+            case 1:
+                Intent back = new Intent(nutritionActivity.this, BackWorkouts.class);
+                startActivity(back);
+                break;
+            case 2:
+                Intent arms = new Intent(nutritionActivity.this, Arm_Workout_Activity.class);
+                startActivity(arms);
+                break;
+            case 3:
+                Intent leg = new Intent(nutritionActivity.this, LegWorkoutActivity.class);
+                startActivity(leg);
+                break;
+            case 4:
+                Intent shoulder = new Intent(nutritionActivity.this, ShoulderWorkoutActivity.class);
+                startActivity(shoulder);
+                break;
+        }
+    }
 }
