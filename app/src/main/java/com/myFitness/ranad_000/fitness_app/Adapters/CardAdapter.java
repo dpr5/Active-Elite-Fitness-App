@@ -16,11 +16,6 @@ import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
-//import com.myFitness.ranad_000.fitness_app.Activities.RecyclerViewClickListener;
-
-/**
- * Created by ranad_000 on 9/20/2017.
- */
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.NumberViewHolder> {
 

@@ -1,14 +1,12 @@
 package com.myFitness.ranad_000.fitness_app.Activities;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-
+import android.widget.Toast;
 
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
@@ -17,13 +15,14 @@ import com.myFitness.ranad_000.fitness_app.R;
 import java.util.ArrayList;
 import java.util.List;
 
+public class test1 extends AppCompatActivity implements RecyclerViewClickListener {
 
-public class chestWorkoutActivity extends AppCompatActivity implements RecyclerViewClickListener {
-
+    private ViewPager mViewPager;
 
     private CardAdapter adapter;
     private RecyclerView recView;
 
+    Toast mToast;
 
 
     private List<Data_for_Cards> Data = new ArrayList<>();
@@ -31,13 +30,7 @@ public class chestWorkoutActivity extends AppCompatActivity implements RecyclerV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chest_workout);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
-        setSupportActionBar(toolbar);
-
-        toolbar.inflateMenu(R.menu.nav_bar_menu);
-
+        setContentView(R.layout.activity_body_part_selection);
 
         recView = (RecyclerView) findViewById(R.id.recyclerview);
         adapter = new CardAdapter(Data, this);
@@ -50,31 +43,9 @@ public class chestWorkoutActivity extends AppCompatActivity implements RecyclerV
         initData();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.nav_bar_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.calendar:
-                Intent calendar = new Intent(chestWorkoutActivity.this, calendar.class);
-                startActivity(calendar);
-                return true;
-            case R.id.home:
-                Intent home = new Intent(chestWorkoutActivity.this, MainActivity.class);
-                startActivity(home);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-    }
 
     private void initData() {
-        Data_for_Cards card = new Data_for_Cards("Bench Press", R.drawable.chest_image);
+        Data_for_Cards card = new Data_for_Cards("Chest Workouts", R.drawable.chest_image);
         Data.add(card);
 
         card = new Data_for_Cards("Back Workouts", R.drawable.backfly1);
@@ -96,29 +67,30 @@ public class chestWorkoutActivity extends AppCompatActivity implements RecyclerV
 
     @Override
     public void onListItemClick(int position) {
+        String toastMessage = "Item #" + position + " clicked";
+        mToast = Toast.makeText(this, toastMessage, Toast.LENGTH_LONG);
+        mToast.show();
         switch (position) {
             case 0:
-                Intent chest = new Intent(chestWorkoutActivity.this, Bench_Workout_Activity.class);
+                Intent chest = new Intent(test1.this, test2.class);
                 startActivity(chest);
                 break;
             case 1:
-                Intent back = new Intent(chestWorkoutActivity.this, BackWorkouts.class);
+                Intent back = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
                 startActivity(back);
                 break;
             case 2:
-                Intent arms = new Intent(chestWorkoutActivity.this, Arm_Workout_Activity.class);
+                Intent arms = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
                 startActivity(arms);
                 break;
             case 3:
-                Intent leg = new Intent(chestWorkoutActivity.this, LegWorkoutActivity.class);
+                Intent leg = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
                 startActivity(leg);
                 break;
             case 4:
-                Intent shoulder = new Intent(chestWorkoutActivity.this, ShoulderWorkoutActivity.class);
+                Intent shoulder = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
                 startActivity(shoulder);
                 break;
         }
     }
 }
-
-

@@ -10,11 +10,11 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Activities.SplashScreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.SecondActivity" />
         <activity android:name=".Activities.nutritionActivity" />
@@ -62,7 +62,10 @@
         <activity android:name=".Activities.Paleo_Diet" />
         <activity android:name=".Activities.Intermittent_Fasting" />
         <activity android:name=".Activities.Bottom_Navigation_Bar" />
-        <activity android:name=".Activities.Cardio_Workout_Plan"></activity>
+        <activity android:name=".Activities.Cardio_Workout_Plan" />
+        <activity android:name=".Activities.test1" />
+        <activity android:name=".Activities.calendar" />
+        <activity android:name=".Activities.test2"></activity>
     </application>
 
 </manifest>
