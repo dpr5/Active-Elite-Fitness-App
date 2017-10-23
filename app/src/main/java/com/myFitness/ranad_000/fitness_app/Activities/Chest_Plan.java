@@ -45,23 +45,23 @@ public class Chest_Plan extends AppCompatActivity {
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent bench = new Intent(view.getContext(), Bench_Workout_Activity.class);
+                    Intent bench = new Intent(view.getContext(), Chest_Bench_Workout_Activity.class);
                     startActivityForResult(bench, 0);
                 }
                 if (position == 1) {
-                    Intent incline = new Intent(view.getContext(), Incline_Bench_Activity.class);
+                    Intent incline = new Intent(view.getContext(), Chest_Incline_Bench_Activity.class);
                     startActivityForResult(incline, 0);
                 }
                 if (position == 2) {
-                    Intent decline = new Intent(view.getContext(), Decline_Workout_Activity.class);
+                    Intent decline = new Intent(view.getContext(), Chest_Decline_Workout_Activity.class);
                     startActivityForResult(decline, 0);
                 }
                 if (position == 3) {
-                    Intent decline = new Intent(view.getContext(), CablePress_Workout_Activity.class);
+                    Intent decline = new Intent(view.getContext(), Chest_CablePress_Workout_Activity.class);
                     startActivityForResult(decline, 0);
                 }
                 if (position == 4) {
-                    Intent fly = new Intent(view.getContext(), ChestFly_Workout_Activity.class);
+                    Intent fly = new Intent(view.getContext(), Chest_Fly_Workout_Activity.class);
                     startActivityForResult(fly, 0);
                 }
 

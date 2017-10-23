@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_blue_background"
-    tools:context="com.myFitness.ranad_000.fitness_app.Activities.ChestFly_Workout_Activity">
+    tools:context="com.myFitness.ranad_000.fitness_app.Activities.Chest_Fly_Workout_Activity">
 
 
     <include layout="@layout/workout_layout"/>

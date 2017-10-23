@@ -99,12 +99,9 @@ public class BodyPartSelection extends AppCompatActivity implements RecyclerView
 
     @Override
     public void onListItemClick(int position) {
-//        String toastMessage = "Item #" + position + " clicked";
-//        mToast = Toast.makeText(this, toastMessage, Toast.LENGTH_LONG);
-//        mToast.show();
         switch (position) {
             case 0:
-                Intent chest = new Intent(BodyPartSelection.this, chestWorkoutActivity.class);
+                Intent chest = new Intent(BodyPartSelection.this, ChestWorkoutActivity.class);
                 startActivity(chest);
                 break;
             case 1:

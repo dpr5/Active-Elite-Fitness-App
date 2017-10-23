@@ -76,19 +76,19 @@ public class test1 extends AppCompatActivity implements RecyclerViewClickListene
                 startActivity(chest);
                 break;
             case 1:
-                Intent back = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
+                Intent back = new Intent(test1.this, Bicep_BarbellCurl_Workout_Activity.class);
                 startActivity(back);
                 break;
             case 2:
-                Intent arms = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
+                Intent arms = new Intent(test1.this, Bicep_BarbellCurl_Workout_Activity.class);
                 startActivity(arms);
                 break;
             case 3:
-                Intent leg = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
+                Intent leg = new Intent(test1.this, Bicep_BarbellCurl_Workout_Activity.class);
                 startActivity(leg);
                 break;
             case 4:
-                Intent shoulder = new Intent(test1.this, BarbellCurl_Workout_Activity.class);
+                Intent shoulder = new Intent(test1.this, Bicep_BarbellCurl_Workout_Activity.class);
                 startActivity(shoulder);
                 break;
         }
