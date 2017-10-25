@@ -44,24 +44,26 @@
     </RelativeLayout>
 
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@id/header_group"
-        android:layout_centerHorizontal="true">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:orientation="horizontal"
             >
 
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/workout_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="workoutActivity"
@@ -71,8 +73,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/nutrition_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="nutritionActivity"
@@ -80,8 +82,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/workout_plan_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="workoutPlans"
@@ -91,8 +93,26 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            >
 
-    </ScrollView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/macrosCalc_button"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="macrosCalc"
+                android:src="@drawable/macros" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

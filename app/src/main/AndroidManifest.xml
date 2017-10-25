@@ -64,7 +64,8 @@
         <activity android:name=".Activities.Cardio_Workout_Plan" />
         <activity android:name=".Activities.test1" />
         <activity android:name=".Activities.calendar" />
-        <activity android:name=".Activities.test2"></activity>
+        <activity android:name=".Activities.test2" />
+        <activity android:name=".MacrosCalc"></activity>
     </application>
 
 </manifest>

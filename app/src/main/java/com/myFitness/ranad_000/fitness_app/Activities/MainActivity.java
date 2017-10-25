@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 
+import com.myFitness.ranad_000.fitness_app.MacrosCalc;
 import com.myFitness.ranad_000.fitness_app.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void macrosCalc(View v) {
+        Intent intent = new Intent(this, MacrosCalc.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.nav_bar_menu, menu);

@@ -7,26 +7,15 @@
     <string name="enter_weight">Enter Weight:</string>
     <string name="enter_age">Enter Age:</string>
 
-    <string-array name="name">
-        <item>Dharmesh</item>
-        <item>John</item>
-        <item>Timmy</item>
-        <item>Drew</item>
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
     </string-array>
 
-    <string-array name="stuff">
-        <item>Dharmesh.com</item>
-        <item>John.com</item>
-        <item>Timmy.com</item>
-        <item>Drew.com</item>
+    <string-array name="age">
+
     </string-array>
 
-    <string-array name="numbers">
-        <item>432</item>
-        <item>543</item>
-        <item>856</item>
-        <item>867</item>
-    </string-array>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
