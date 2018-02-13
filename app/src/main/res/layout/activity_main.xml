@@ -7,13 +7,11 @@
     tools:context="com.myFitness.ranad_000.fitness_app.Activities.MainActivity">
 
 
-    <include layout="@layout/toolbar_top"></include>
-
     <RelativeLayout
-        android:layout_below="@+id/top_toolbar"
         android:id="@+id/header_group"
         android:layout_width="fill_parent"
-        android:layout_height="250dp">
+        android:layout_height="250dp"
+        android:layout_below="@+id/top_toolbar">
 
 
         <ImageView
@@ -56,8 +54,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -70,12 +67,12 @@
                 android:src="@drawable/shoulder_image" />
 
 
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/nutrition_button"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_weight="1"
+                android:background="@drawable/ripple"
                 android:clickable="true"
                 android:onClick="nutritionActivity"
                 android:src="@drawable/nutrition_main" />
@@ -90,15 +87,13 @@
                 android:src="@drawable/runner" />
 
 
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -114,5 +109,6 @@
 
     </LinearLayout>
 
+    <include layout="@layout/toolbar_bottom"/>
 
 </RelativeLayout>

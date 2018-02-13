@@ -7,11 +7,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.myFitness.ranad_000.fitness_app.Activities.ChestWorkouts.Chest_Plan;
+import com.myFitness.ranad_000.fitness_app.Activities.Diets.Intermittent_Fasting;
+import com.myFitness.ranad_000.fitness_app.Activities.Diets.Keto_Diet;
+import com.myFitness.ranad_000.fitness_app.Activities.LegsWorkout.LegWorkoutActivity;
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
 import com.myFitness.ranad_000.fitness_app.R;
+import com.myFitness.ranad_000.fitness_app.ShoulderWorkouts.ShoulderWorkoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;

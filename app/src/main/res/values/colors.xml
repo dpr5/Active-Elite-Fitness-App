@@ -31,4 +31,8 @@
     <color name="blue2">#0F3F90</color>
     <color name="blue3">#0143B2</color>
     <color name="blue4">#03A9F4</color>
+
+    <color name="white_toolbar">#ffffff</color>
+    <color name="grey_toolbar">#D3D3D3</color>
+
 </resources>

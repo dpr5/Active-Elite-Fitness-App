@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.myFitness.ranad_000.Fitness_App"
-        minSdkVersion 15
+        minSdkVersion 21
         //minSdkVersion was 15 before adding compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
         targetSdkVersion 23
         versionCode 1

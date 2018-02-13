@@ -4,7 +4,7 @@
     <string name="female">Female</string>
     <string name="submit">Submit</string>
     <string name="enter_height">Enter Height:</string>
-    <string name="enter_weight">Enter Weight:</string>
+
     <string name="enter_age">Enter Age:</string>
 
     <string-array name="gender">
@@ -90,5 +90,6 @@ Some studies have shown it’s not as beneficial for women as it is for men (117
 In addition, some people should avoid fasting. This includes those sensitive to drops in blood sugar levels, pregnant women, breastfeeding moms, teenagers, children and people who are malnourished, underweight or nutrient deficient.
 
 Bottom Line: Intermittent fasting cycles between fasting and eating in various patterns. It is very effective for weight loss and has been linked to numerous health benefits."</string>
+    <string name="enter_weight">Enter Weight:</string>
 
 </resources>

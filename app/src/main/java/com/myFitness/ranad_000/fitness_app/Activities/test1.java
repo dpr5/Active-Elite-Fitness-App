@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.myFitness.ranad_000.fitness_app.Activities.ArmWorkouts.Bicep_BarbellCurl_Workout_Activity;
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
 import com.myFitness.ranad_000.fitness_app.R;

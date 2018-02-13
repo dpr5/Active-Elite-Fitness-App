@@ -11,9 +11,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.myFitness.ranad_000.fitness_app.Activities.ArmWorkouts.Arm_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.ChestWorkouts.ChestWorkoutActivity;
+import com.myFitness.ranad_000.fitness_app.Activities.LegsWorkout.LegWorkoutActivity;
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.BackWorkouts;
 import com.myFitness.ranad_000.fitness_app.R;
+import com.myFitness.ranad_000.fitness_app.ShoulderWorkouts.ShoulderWorkoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +43,7 @@ public class BodyPartSelection extends AppCompatActivity implements RecyclerView
         setContentView(R.layout.activity_body_part_selection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         toolbar.inflateMenu(R.menu.nav_bar_menu);
 

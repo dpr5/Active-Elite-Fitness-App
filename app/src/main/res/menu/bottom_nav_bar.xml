@@ -4,8 +4,19 @@
 
     <item
         android:id="@+id/item1"
-        android:icon="@drawable/stopwatch"
+        android:icon="@drawable/aaa_icon_shazam"
+        android:title="home"
+        ></item>
+
+    <item
+        android:id="@+id/item2"
+        android:icon="@mipmap/icon_stopwatch_stopwatch"
         android:title="stopwatch"></item>
+
+    <item
+        android:id="@+id/item3"
+        android:icon="@mipmap/bottom_nav_star"
+        android:title="favorites"></item>
 
 
 </menu>

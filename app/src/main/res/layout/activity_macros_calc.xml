@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -20,13 +20,15 @@
             android:layout_height="300dp"
             android:orientation="vertical">
 
+
+
             <TextView
                 android:id="@+id/enter_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Enter Weight: "
+                android:text="@string/enter_weight"
                 android:textSize="20sp" />
 
             <TextView
@@ -56,13 +58,32 @@
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:id="@+id/mspinner1"
+                android:layout_weight="1"></Spinner>
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:id="@+id/mspinner2"
+                android:layout_weight="1"></Spinner>
+
+
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:id="@+id/mspinner3"
+                android:layout_weight="1"></Spinner>
+<!--
             <EditText
                 android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="Enter Weight: "
+                android:hint="Enter Weight: "
                 android:textSize="20sp" />
 
             <EditText
@@ -71,7 +92,7 @@
                 android:layout_height="10dp"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="Enter Height: "
+                android:hint="Enter height: "
                 android:textSize="20sp" />
 
             <EditText
@@ -80,10 +101,10 @@
                 android:layout_height="10dp"
                 android:layout_weight="1"
                 android:inputType="number"
-                android:text="Enter Age: "
+                android:hint="Enter Age: "
                 android:textSize="20sp" />
 
-
+-->
         </LinearLayout>
 
 
@@ -105,12 +126,7 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:spinnerMode="dropdown" />
+
 
 
 </LinearLayout>
