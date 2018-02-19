@@ -12,7 +12,7 @@ public class Tricep_TricepExnt_Workout_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tricep_exnt__workout_);
+        setContentView(R.layout.workout_layout);
 
         ImageView image1 = (ImageView)findViewById(R.id.image1);
         ImageView image2 = (ImageView)findViewById(R.id.image2);

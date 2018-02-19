@@ -13,7 +13,7 @@ public class Back_TBarRow_Workout_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tbar_row__workout_);
+        setContentView(R.layout.workout_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
 

@@ -29,9 +29,9 @@
         <activity android:name=".Activities.ChestWorkouts.Chest_CablePress_Workout_Activity" />
         <activity android:name=".ShoulderWorkouts.Shoulder_LateralRaise_Workout_Activity" />
         <activity android:name=".ShoulderWorkouts.Shoulder_ShoulderPress_Workout_Activity" />
-        <activity android:name=".Activities.ArnoldPress_Workout_Activity" />
-        <activity android:name=".Activities.FrontRaise_Workout_Activity" />
-        <activity android:name=".Activities.Delt_Workout_Activity" />
+        <activity android:name=".ShoulderWorkouts.Shoulder_ArnoldPress_Workout_Activity" />
+        <activity android:name=".ShoulderWorkouts.Shoulder_FrontRaise_Workout_Activity" />
+        <activity android:name=".ShoulderWorkouts.Shoulder_Delt_Workout_Activity" />
         <activity android:name=".ShoulderWorkouts.Shoulder_UprightRow_Workout_Activity" />
         <activity android:name=".Activities.LegsWorkout.Leg_Squats_Workout_Activity" />
         <activity android:name=".Activities.LegsWorkout.Leg_LegExtn_Workout_Activity" />

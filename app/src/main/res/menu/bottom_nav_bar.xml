@@ -4,18 +4,18 @@
 
     <item
         android:id="@+id/item1"
-        android:icon="@drawable/aaa_icon_shazam"
+        android:icon="@drawable/icon_home_home"
         android:title="home"
         ></item>
 
     <item
         android:id="@+id/item2"
-        android:icon="@mipmap/icon_stopwatch_stopwatch"
+        android:icon="@drawable/calendar_icon"
         android:title="stopwatch"></item>
 
     <item
         android:id="@+id/item3"
-        android:icon="@mipmap/bottom_nav_star"
+        android:icon="@drawable/icon_fav_star"
         android:title="favorites"></item>
 
 

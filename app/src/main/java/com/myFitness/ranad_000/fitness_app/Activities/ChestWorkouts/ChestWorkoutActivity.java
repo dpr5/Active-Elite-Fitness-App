@@ -8,25 +8,34 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 
 
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.BackFly_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.BackWorkouts;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.Back_IsoRow_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.Back_LatPulldown_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.Back_LowRow_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.BackWorkouts.Back_TBarRow_Workout_Activity;
 import com.myFitness.ranad_000.fitness_app.Activities.MainActivity;
 import com.myFitness.ranad_000.fitness_app.Activities.RecyclerViewClickListener;
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
+import com.myFitness.ranad_000.fitness_app.Adapters.GridAdapter;
+import com.myFitness.ranad_000.fitness_app.Adapters.ItemObject;
 import com.myFitness.ranad_000.fitness_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ChestWorkoutActivity extends AppCompatActivity implements RecyclerViewClickListener {
+public class ChestWorkoutActivity extends AppCompatActivity{
 
 
-    private CardAdapter adapter;
-    private RecyclerView recView;
-
-
+    GridAdapter adapter;
+    GridView gv;
 
     private List<Data_for_Cards> Data = new ArrayList<>();
 
@@ -38,18 +47,45 @@ public class ChestWorkoutActivity extends AppCompatActivity implements RecyclerV
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         toolbar.inflateMenu(R.menu.nav_bar_menu);
 
 
-        recView = (RecyclerView) findViewById(R.id.recyclerview);
-        adapter = new CardAdapter(Data, this);
+        gv= (GridView) findViewById(R.id.gridview);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recView.setLayoutManager(layoutManager);
-        recView.setHasFixedSize(true);
-        recView.setAdapter(adapter);
+        adapter=new GridAdapter(this,getData());
+        gv.setAdapter(adapter);
 
-        initData();
+
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(MainActivity.this, "Position: " + position, Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 0:
+                        Intent chest = new Intent(ChestWorkoutActivity.this, Chest_Bench_Workout_Activity.class);
+                        startActivity(chest);
+                        break;
+                    case 1:
+                        Intent back = new Intent(ChestWorkoutActivity.this, Chest_CablePress_Workout_Activity.class);
+                        startActivity(back);
+                        break;
+                    case 2:
+                        Intent arms = new Intent(ChestWorkoutActivity.this, Chest_Decline_Workout_Activity.class);
+                        startActivity(arms);
+                        break;
+                    case 3:
+                        Intent leg = new Intent(ChestWorkoutActivity.this, Chest_Fly_Workout_Activity.class);
+                        startActivity(leg);
+                        break;
+                    case 4:
+                        Intent shoulder = new Intent(ChestWorkoutActivity.this, Chest_Incline_Bench_Activity.class);
+                        startActivity(shoulder);
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -75,52 +111,40 @@ public class ChestWorkoutActivity extends AppCompatActivity implements RecyclerV
 
     }
 
-    private void initData() {
-        Data_for_Cards card = new Data_for_Cards("Bench Press", R.drawable.chest_image);
-        Data.add(card);
+    private ArrayList getData()
+    {
+        ArrayList<ItemObject> card=new ArrayList<>();
 
-        card = new Data_for_Cards("Incline Bench Press", R.drawable.incline_bench_medium1);
-        Data.add(card);
+        ItemObject s=new ItemObject();
+        s.setTitle("Bench Press");
+        s.setImageID(R.drawable.bench_wide1);
+        card.add(s);
 
-        card = new Data_for_Cards("Decline Bench Press", R.drawable.decline_bar1);
-        Data.add(card);
+        s=new ItemObject();
+        s.setTitle("Cable Press");
+        s.setImageID(R.drawable.cable_press1);
+        card.add(s);
 
-        card = new Data_for_Cards("Chest Fly", R.drawable.chest_fly1);
-        Data.add(card);
 
-        card = new Data_for_Cards("Chest Cable Press", R.drawable.cable_press1);
-        Data.add(card);
+        s=new ItemObject();
+        s.setTitle("Decline Bench Press");
+        s.setImageID(R.drawable.decline_bar1);
+        card.add(s);
 
-        card = new Data_for_Cards("More Workouts coming soon...", R.drawable.coming_soon);
-        Data.add(card);
 
+        s=new ItemObject();
+        s.setTitle("Chest Fly");
+        s.setImageID(R.drawable.chest_fly1);
+        card.add(s);
+
+        s=new ItemObject();
+        s.setTitle("Incline Bench Press");
+        s.setImageID(R.drawable.incline_bench_medium1);
+        card.add(s);
+
+
+        return card;
     }
 
-    @Override
-    public void onListItemClick(int position) {
-        switch (position) {
-            case 0:
-                Intent chest = new Intent(ChestWorkoutActivity.this, Chest_Bench_Workout_Activity.class);
-                startActivity(chest);
-                break;
-            case 1:
-                Intent back = new Intent(ChestWorkoutActivity.this, Chest_Incline_Bench_Activity.class);
-                startActivity(back);
-                break;
-            case 2:
-                Intent arms = new Intent(ChestWorkoutActivity.this, Chest_Decline_Workout_Activity.class);
-                startActivity(arms);
-                break;
-            case 3:
-                Intent leg = new Intent(ChestWorkoutActivity.this, Chest_Fly_Workout_Activity.class);
-                startActivity(leg);
-                break;
-            case 4:
-                Intent shoulder = new Intent(ChestWorkoutActivity.this, Chest_CablePress_Workout_Activity.class);
-                startActivity(shoulder);
-                break;
-        }
-    }
+
 }
-
-

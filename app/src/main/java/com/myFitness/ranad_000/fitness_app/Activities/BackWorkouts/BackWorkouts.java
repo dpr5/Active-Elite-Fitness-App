@@ -8,22 +8,32 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 
+import com.myFitness.ranad_000.fitness_app.Activities.ArmWorkouts.Arm_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.BodyPartSelection;
+import com.myFitness.ranad_000.fitness_app.Activities.ChestWorkouts.ChestWorkoutActivity;
 import com.myFitness.ranad_000.fitness_app.Activities.ChestWorkouts.Chest_CablePress_Workout_Activity;
+import com.myFitness.ranad_000.fitness_app.Activities.LegsWorkout.LegWorkoutActivity;
 import com.myFitness.ranad_000.fitness_app.Activities.MainActivity;
 import com.myFitness.ranad_000.fitness_app.Activities.RecyclerViewClickListener;
+import com.myFitness.ranad_000.fitness_app.Activities.calendar;
 import com.myFitness.ranad_000.fitness_app.Adapters.CardAdapter;
 import com.myFitness.ranad_000.fitness_app.Adapters.Data_for_Cards;
+import com.myFitness.ranad_000.fitness_app.Adapters.GridAdapter;
+import com.myFitness.ranad_000.fitness_app.Adapters.ItemObject;
 import com.myFitness.ranad_000.fitness_app.R;
+import com.myFitness.ranad_000.fitness_app.ShoulderWorkouts.ShoulderWorkoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BackWorkouts extends AppCompatActivity implements RecyclerViewClickListener {
+public class BackWorkouts extends AppCompatActivity{
 
-    private CardAdapter adapter;
-    private RecyclerView recView;
-
+    GridAdapter adapter;
+    GridView gv;
 
 
     private List<Data_for_Cards> Data = new ArrayList<>();
@@ -34,19 +44,45 @@ public class BackWorkouts extends AppCompatActivity implements RecyclerViewClick
         setContentView(R.layout.activity_body_part_selection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         toolbar.inflateMenu(R.menu.nav_bar_menu);
 
 
-        recView = (RecyclerView) findViewById(R.id.recyclerview);
-        adapter = new CardAdapter(Data, this);
+        gv= (GridView) findViewById(R.id.gridview);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recView.setLayoutManager(layoutManager);
-        recView.setHasFixedSize(true);
-        recView.setAdapter(adapter);
+        adapter=new GridAdapter(this,getData());
+        gv.setAdapter(adapter);
 
-        initData();
+
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(MainActivity.this, "Position: " + position, Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 0:
+                        Intent chest = new Intent(BackWorkouts.this, Back_IsoRow_Workout_Activity.class);
+                        startActivity(chest);
+                        break;
+                    case 1:
+                        Intent back = new Intent(BackWorkouts.this, Back_LatPulldown_Workout_Activity.class);
+                        startActivity(back);
+                        break;
+                    case 2:
+                        Intent arms = new Intent(BackWorkouts.this, Back_LowRow_Workout_Activity.class);
+                        startActivity(arms);
+                        break;
+                    case 3:
+                        Intent leg = new Intent(BackWorkouts.this, Back_TBarRow_Workout_Activity.class);
+                        startActivity(leg);
+                        break;
+                    case 4:
+                        Intent shoulder = new Intent(BackWorkouts.this, BackFly_Workout_Activity.class);
+                        startActivity(shoulder);
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -72,49 +108,39 @@ public class BackWorkouts extends AppCompatActivity implements RecyclerViewClick
 
     }
 
-    private void initData() {
-        Data_for_Cards card = new Data_for_Cards("Iso Row", R.drawable.isorow1);
-        Data.add(card);
+    private ArrayList getData()
+    {
+        ArrayList<ItemObject> card=new ArrayList<>();
 
-        card = new Data_for_Cards("Laeral Pulldown", R.drawable.latpulldown1);
-        Data.add(card);
+        ItemObject s=new ItemObject();
+        s.setTitle("Iso Row");
+        s.setImageID(R.drawable.isorow1);
+        card.add(s);
 
-        card = new Data_for_Cards("Low Row", R.drawable.bent_over_row1);
-        Data.add(card);
+        s=new ItemObject();
+        s.setTitle("Lat Pulldown");
+        s.setImageID(R.drawable.latpulldown1);
+        card.add(s);
 
-        card = new Data_for_Cards("T-Bar Row", R.drawable.tbar_row1);
-        Data.add(card);
 
-        card = new Data_for_Cards("More Workouts coming soon...", R.drawable.coming_soon);
-        Data.add(card);
+        s=new ItemObject();
+        s.setTitle("Low Row");
+        s.setImageID(R.drawable.bent_over_row1);
+        card.add(s);
 
+
+        s=new ItemObject();
+        s.setTitle("Tbar Row");
+        s.setImageID(R.drawable.tbar_row1);
+        card.add(s);
+
+        s=new ItemObject();
+        s.setTitle("Back Fly");
+        s.setImageID(R.drawable.backfly1);
+        card.add(s);
+
+
+        return card;
     }
 
-    @Override
-    public void onListItemClick(int position) {
-        switch (position) {
-            case 0:
-                Intent chest = new Intent(BackWorkouts.this, Back_IsoRow_Workout_Activity.class);
-                startActivity(chest);
-                break;
-            case 1:
-                Intent back = new Intent(BackWorkouts.this, Back_LatPulldown_Workout_Activity.class);
-                startActivity(back);
-                break;
-            case 2:
-                Intent arms = new Intent(BackWorkouts.this, Back_LowRow_Workout_Activity.class);
-                startActivity(arms);
-                break;
-            case 3:
-                Intent leg = new Intent(BackWorkouts.this, Back_TBarRow_Workout_Activity.class);
-                startActivity(leg);
-                break;
-            case 4:
-                Intent shoulder = new Intent(BackWorkouts.this, Chest_CablePress_Workout_Activity.class);
-                startActivity(shoulder);
-                break;
-        }
-    }
 }
-
-

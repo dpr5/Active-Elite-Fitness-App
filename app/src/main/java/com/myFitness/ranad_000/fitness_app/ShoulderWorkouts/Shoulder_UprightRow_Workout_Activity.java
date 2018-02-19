@@ -12,7 +12,7 @@ public class Shoulder_UprightRow_Workout_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upright_row__workout_);
+        setContentView(R.layout.workout_layout);
 
         ImageView image1 = (ImageView)findViewById(R.id.image1);
         ImageView image2 = (ImageView)findViewById(R.id.image2);

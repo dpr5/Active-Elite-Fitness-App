@@ -17,7 +17,7 @@ public class Chest_Bench_Workout_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bench__workout_);
+        setContentView(R.layout.workout_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
 
